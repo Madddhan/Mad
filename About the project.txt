@@ -1,0 +1,14 @@
+TailorMade:
+(By Team MAD-T085)
+Face or Object recognition can be done by methods like Haar Cascades but it has its limitation.
+The face is recognized within a rectangular box and the exact boundary of objects are not recognized.
+Hence, we have used the BackgroundSubtraction module from the package 'OpenCV'.
+Using that, the objects or surroundings which are non-moving are perceived as black pixels and the moving parts are
+perceived as white pixels.By placing ourselves in front a stable background and record a video of ourselves for about 6-10
+seconds, all the while moving our body subtly.This video is processed with the "BackgroundsubtractorMOG2()"
+and the output is stored as a video.Images of each frame of the latter video is extracted through python.
+Now the frame with optimal boundary conditions is taken as the standard for measuring height and width.
+Two such images are taken - a frontal image and one on the sideways. Using Tensorflow, we can recognize differents parts
+as head,hand,leg,shoulder etc. Now the ratio proportions of each parts are obtained such as length-width ration of face,
+abdomen,waist etc.By knowing the ratio between pixels and inches, we can identify the actual size of body. Hence allowing
+the program to surf through a clothing database to provide us with suitable and fitting clothes.
